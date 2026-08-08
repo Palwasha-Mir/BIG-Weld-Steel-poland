@@ -1,1 +1,219 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIG Weld Steel | Profesjonalne Usługi Spawalnicze</title>
+    <style>
+        :root {
+            --primary: #ffc107;
+            --dark: #1a1a1a;
+            --grey: #2d2d2d;
+            --light: #f4f4f4;
+            --text: #ffffff;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .hero {
+            padding: 100px 10%;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200') no-repeat center center/cover;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            color: var(--dark);
+        }
+
+        .services {
+            padding: 80px 10%;
+            background-color: var(--grey);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .section-title span {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--dark);
+            padding: 30px;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: var(--primary);
+        }
+
+        .contact {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--grey);
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">BIG Weld <span>Steel</span></div>
+    </header>
+
+    <section class="hero">
+        <h1>Konstrukcje Stalowe na <span>Wymiar</span></h1>
+        <p>Profesjonalne usługi spawalnicze i montaż konstrukcji stalowych w Polsce. Najwyższa jakość, terminowość i solidność wykonania.</p>
+        <a href="#contact" class="btn">Zapytaj o wycenę</a>
+    </section>
+
+    <section class="services">
+        <h2 class="section-title">Nasze <span>Usługi</span></h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Spawanie TIG / MIG / MAG</h3>
+                <p>Precyzyjne spawanie różnego rodzaju stali oraz aluminium przez doświadczonych specjalistów.</p>
+            </div>
+            <div class="card">
+                <h3>Konstrukcje Stalowe</h3>
+                <p>Projektowanie, produkcja oraz montaż solidnych konstrukcji stalowych dla przemysłu i budownictwa.</p>
+            </div>
+            <div class="card">
+                <h3>Darmowa Wycena</h3>
+                <p>Szybka analiza projektu i przygotowanie przejrzystej oferty cenowej dostosowanej do Twoich potrzeb.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Skontaktuj się <span>z nami</span></h2>
+        <div class="contact-form">
+            <input type="text" placeholder="Twoje Imię i Nazwisko" required>
+            <input type="email" placeholder="Twój Adres E-mail" required>
+            <textarea rows="5" placeholder="Opisz swój projekt..." required></textarea>
+            <button class="btn" type="submit" style="cursor: pointer; border: none;">Wyślij wiadomość</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 BIG Weld Steel. Wszelkie prawa zastrzeżone. Projekt strony: Palwasha Mir</p>
+    </footer>
+
+</body>
+</html>
